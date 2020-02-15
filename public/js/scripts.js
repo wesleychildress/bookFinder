@@ -1,3 +1,17 @@
+function entFunc(){
+    $("#searchForm").submit(function(e) {
+        e.preventDefault();
+        findBook();
+        return false;
+    });
+    
+    $('#myBtn').click(function(e){
+        e.preventDefault();
+        // call function
+        findBook();
+    });
+}
+
 function findBook(){
     var userSearch = document.getElementById('userInput').value;
     var bookResult = document.getElementById('result');
